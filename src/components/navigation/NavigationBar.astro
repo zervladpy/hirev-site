@@ -1,0 +1,21 @@
+---
+import SignInButton from '@components/buttons/SignInButton.astro';
+import { Picture } from 'astro:assets';
+import corp_logo from '@images/corp_logo.png'
+
+interface Props {
+ isAuthenticated?: boolean 
+};
+
+const { isAuthenticated } = Astro.props;
+---
+
+<nav class="flex flex-row justify-between py-5">
+  
+  <a href="/" class="flex flex-row gap-4 items-center align-middle ">
+    <Picture src={corp_logo} alt="Corporation Logo"} width={40} class="rounded-md" />
+    <span class="text-xl font-semibold">HIREV</span>
+  </a>
+
+  {!isAuthenticated && <SignInButton />}
+</nav>

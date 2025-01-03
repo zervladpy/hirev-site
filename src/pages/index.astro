@@ -1,0 +1,37 @@
+---
+
+import Layout from "@layouts/Layout.astro"
+import Picture from "astro/components/Picture.astro"
+
+import corp_logo from "@images/corp_logo.png"
+import CallToActionButton from "@components/buttons/CallToActionButton.astro"
+
+interface Props {
+  isAuthenticated?: boolean
+}
+
+const { isAuthenticated } = Astro.props
+---
+
+<Layout title="Hirev - Site"> 
+
+  <article class="flex flex-row flex-wrap flex-grow h-full align-middle items-center justify-between">
+    <section class=""> 
+      <h3 class="text-4xl font-bold py-10">¡Únete a Hispanic Revolution en New Eden!</h3>
+      <p class="prose dark:prose-invert">
+        Bienvenido a Hispanic Revolution, una corporación hispana de null sec en EVE Online. Somos una comunidad unida por la pasión por el juego, el trabajo en equipo y la conquista de los rincones más desafiantes de New Eden.
+      </p>
+      <p class="prose dark:prose-invert">
+Ya sea que disfrutes del PvP, la minería, la industria o las exploraciones, aquí encontrarás un lugar donde crecer, aprender y marcar la diferencia. Nuestro objetivo es fortalecer a la comunidad hispana en el universo de EVE, enfrentando juntos los retos del espacio profundo.
+      </p>
+      <p class="prose dark:prose-invert">¡Forma parte de nuestra revolución y lleva tu aventura al siguiente nivel!</p>
+      <p class="prose dark:prose-invert">Hispanic Revolution: Donde los hispanohablantes dominamos las estrellas.</p>
+      <div class="flex flex-row items-center justify-end pt-10">
+        <CallToActionButton />
+      </div>
+    </section>
+    <Picture src={corp_logo} alt="Corporation Logo" width="500"/>
+
+  </article>
+
+</Layout>

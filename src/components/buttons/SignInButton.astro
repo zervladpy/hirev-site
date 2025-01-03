@@ -1,0 +1,22 @@
+---
+import DiscordIcon from "@icons/DiscordIcon.astro";
+
+---
+
+<form action="/api/auth/signin" method="post">
+  <button id="discord-signin" class="flex flex-row items-center gap-2 px-5 py-2 bg-white rounded-md transition-all">
+    <DiscordIcon size="15px" fill="#FFFFFF"/>
+    <span>Iniciar Sesión</span>
+  </button>
+</form>
+
+<style>
+#discord-signin {
+  background: #5865F2;
+}
+
+#discord-signin:hover {
+  background: #7289DA;
+}
+
+</style>
